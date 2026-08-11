@@ -1,0 +1,4 @@
+LOG-1,Datacenter Power Usage,75.5,Energy
+LOG-2,Employee Commute Fleet,12.0,Transportation
+LOG-3,Reforestation Offset Project,30.0,Offset
+LOG-4,electronic car charge,78.8,Transportation

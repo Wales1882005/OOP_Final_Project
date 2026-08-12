@@ -32,6 +32,28 @@ The app lets users add, update, delete, and save carbon activity logs with valid
 
 > If your build output directory differs, update the classpath accordingly.
 
+### Example Command Line Build
+```bash
+javac -d out src/com/cityu/sdg/gui/MainDashboardGUI.java src/com/cityu/sdg/model/*.java src/com/cityu/sdg/service/*.java
+java -cp out com.cityu.sdg.gui.MainDashboardGUI
+```
+
+## Screenshot
+The application opens as a desktop Swing window with:
+- a header for SDG 13 climate action
+- input fields for activity description, CO₂ amount, and category
+- controls to add, update, delete, and save logs
+- a table showing log ID, description, emissions, category, and high impact flag
+- a net carbon footprint summary at the bottom
+
+> Add a screenshot image file and update this section with the actual screenshot path once available.
+
+## Troubleshooting
+- `Error: Could not find or load main class`: confirm `out` contains compiled classes and use the correct package path.
+- `NoClassDefFoundError`: ensure all source files are compiled before running.
+- `IOException` while saving logs: verify write permissions in the project folder.
+- Offset validation fails: include `cert`, `ref:`, `id:`, or `credit` in the activity description for "Offset" category entries.
+
 ## Persistence Files
 - `climate_logs.txt` - stores saved carbon log records
 - `audit_trail.log` - records audit trail events for create, update, delete, save, and load operations
